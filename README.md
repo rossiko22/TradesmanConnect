@@ -108,7 +108,7 @@ The project consists of the following main sections:
 
 - **index.html** - The main HTML file for the app.
 
-Based on the observed file structure, the following routes likely exist:
+Based on the observed file structure, the following routes are:
 
 - `/` - Redirects to `/choose-language`
 - `/dashboard` - Dashboard page
@@ -119,6 +119,62 @@ Based on the observed file structure, the following routes likely exist:
 - `/create-service` - Create a new service page
 - `/login-register` - Login/Register page
 - `/services` - Services page
+
+### Backend NestJS
+
+# NestJS Project Structure
+
+## Folder Structure
+```
+nestjs-backend/
+├── src/
+│   ├── app.controller.ts
+│   ├── app.module.ts
+│   ├── app.service.ts
+│   ├── main.ts
+│   ├── dto/
+│   │   ├── AccountDto.ts
+│   │   ├── CreateClientDto.ts
+│   │   ├── CreateTradesmenDto.ts
+│   │   ├── ResponseDto.ts
+│   │   └── ServiceDto.ts
+│   ├── entity/
+│   │   ├── Client.ts
+│   │   ├── Service.ts
+│   │   └── Tradesman.ts
+│   ├── registration/
+│   │   ├── registration.controller.ts
+│   │   ├── registration.module.ts
+│   │   └── registration.service.ts
+│   └── tradesman-services/
+│       ├── tradesman-services.controller.ts
+│       ├── tradesman-services.module.ts
+│       └── tradesman-services.service.ts
+├── test/
+│   └── app.e2e-spec.ts
+├── .eslintrc.js
+├── .gitignore
+├── .prettierrc
+├── nest-cli.json
+├── package.json
+├── package-lock.json
+├── README.md
+├── tsconfig.build.json
+└── tsconfig.json
+```
+
+## API Endpoints
+
+### Registration Controller
+- `POST /registration` - Register new user
+- `GET /registration/:id` - Get registration details
+
+### Tradesman Services Controller
+- `POST /tradesman-services` - Create new service
+- `GET /tradesman-services` - Get all services
+- `GET /tradesman-services/:id` - Get service by ID
+- `PUT /tradesman-services/:id` - Update service
+- `DELETE /tradesman-services/:id` - Delete service
 
 
 
