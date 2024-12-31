@@ -79,14 +79,8 @@ The frontend should now be accessible at `http://localhost:4200`.
 
 ## Project Structure
 
-### frontend (Angular)
+### Frontend (Angular)
 
-## Angular Routing - Partial Actual Structure
-
-Based on the observed file structure, the following routes likely exist:
-
-
-## Angular Routing - Partial Actual Structure
 ## Project File Structure
 
 The project consists of the following main sections:
