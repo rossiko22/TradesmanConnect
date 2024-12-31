@@ -77,9 +77,8 @@ The backend should now be running on `http://localhost:3000`.
 
 The frontend should now be accessible at `http://localhost:4200`.
 
-## Project Structure
 
-### Frontend (Angular)
+# Frontend (Angular)
 
 ## Project File Structure
 
