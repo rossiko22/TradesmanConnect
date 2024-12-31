@@ -32,16 +32,13 @@ TradesmanConnect facilitates the connection between skilled tradesmen and client
 ## Tech Stack
 
 - **Backend:**
-  - NestJS
-  - TypeORM
-  - PostgreSQL
-  - JWT for authentication
+  - NestJS(10.4.9)
+  - TypeORM(^0.3.20)
+  - MySQL
 
 - **Frontend:**
-  - Angular
-  - RxJS
-  - NgRx (if used)
-  - Angular Material (if used)
+  - Angular(19.0.6)
+  - Тypescript(~5.6.2)
 
 ## Getting Started
 
@@ -49,9 +46,44 @@ TradesmanConnect facilitates the connection between skilled tradesmen and client
 
 - Node.js (v14 or later)
 - npm (v6 or later)
-- PostgreSQL
+- MySQL
 
 ### Backend Setup
 
 1. Clone the repository:
-2. 
+git clone https://github.com/your-username/tradesman-connect.git
+
+2. Navigate to the backend directory:
+   cd tradesman-connect/nestjs-backend
+
+3. Install dependencies:
+   npm install
+
+4. Set up your environment variables by creating a `.env` file based on `.env.example`.
+
+5. Run database migrations:
+   npm run migration:run
+
+6. Start the development server:
+   npm run start:dev
+
+The backend should now be running on `http://localhost:3000`.
+
+### Frontend Setup
+
+1. Navigate to the frontend directory:
+   cd ../angular-frontend
+
+2. Install dependencies:
+   npm install
+
+3. Start the development server:
+   ng serve
+
+The frontend should now be accessible at `http://localhost:4200`.
+
+## Project Structure
+
+### Backend (NestJS)
+
+
