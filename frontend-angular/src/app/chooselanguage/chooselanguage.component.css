@@ -1,0 +1,151 @@
+.body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+a{
+    cursor: pointer;
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-color);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-text {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.language-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.language-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeInUp 1s ease-out 1s both;
+}
+
+.language-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.language-box i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.language-box span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.app-footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    animation: fadeIn 1s ease-out 1.5s both;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .language-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .language-box {
+        width: 80%;
+        max-width: 300px;
+    }
+}

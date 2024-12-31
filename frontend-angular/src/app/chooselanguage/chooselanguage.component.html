@@ -1,0 +1,24 @@
+<div class="body">
+    <div class="background-overlay"></div>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">Tradesman<span>Connect</span></h1>
+        </header>
+        <main class="language-selection">
+            <h2 class="welcome-text">Добар ден! Изберете го вашиот јазик</h2>
+            <div class="language-options">
+                <a class="language-box" (click)="setCurrentLanguage('en')">
+                    <i class="fas fa-flag-usa"></i>
+                    <span>Англиски</span>
+                </a>
+                <a class="language-box" (click)="setCurrentLanguage('mk')">
+                    <i class="fas fa-flag"></i>
+                    <span>Македонски</span>
+                </a>
+            </div>
+        </main>
+        <footer class="app-footer">
+            <p>&copy; 2025 TradesmanConnect. All rights reserved.</p>
+        </footer>
+    </div>
+</div>

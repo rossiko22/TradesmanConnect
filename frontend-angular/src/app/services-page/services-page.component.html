@@ -1,0 +1,196 @@
+<div class="body">
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo"><a routerLink="/dashboard"><span style="color:#3498db">Tradesman</span><span>Connect</span></a></h1>
+            <nav class="nav-menu">
+                <a routerLink="/dashboard">Home</a>
+                <a routerLink="/services-page">Services</a>
+                <a routerLink="/about-us">About Us</a>
+                <a routerLink="/contact-us">Contact</a>
+            </nav>
+
+            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center;">
+                <a href="" class="profile-icon"><i class="fas fa-user-circle"></i></a>
+                <a routerLink="/login-register" class="logout-btn">Logout</a>
+            </div>
+        </header>
+        
+        <main>
+            <h2 class="section-title">Find Services</h2>
+            
+            <section class="filter-container">
+                <form class="filter-form" [formGroup]="filterForm" (ngSubmit)="onSubmit()">
+                    <select name="country" id="country" formControlName="country">
+                        <option value="">Select Country</option>
+                        <option value="usa">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="canada">Canada</option>
+                    </select>
+                    <select name="city" id="city" formControlName="city">
+                        <option value="">Select City</option>
+                        <option value="new-york">New York</option>
+                        <option value="london">London</option>
+                        <option value="toronto">Toronto</option>
+                    </select>
+                    <select name="profession" id="profession" formControlName="profession">
+                        <option value="">Select Profession</option>
+                        <option value="electrician">Electrician</option>
+                        <option value="plumber">Plumber</option>
+                        <option value="carpenter">Carpenter</option>
+                        <option value="painter">Painter</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <input type="text" name="keyword" placeholder="Search by keyword" formControlName="keyword">
+                    <button type="submit">Search</button>
+                </form>
+            </section>
+
+            <section class="services-grid">
+                <div class="service-card">
+                    <img src="/images/engineering.png" alt="John Doe">
+                    <div class="service-info">
+                        <h3>John Doe</h3>
+                        <p class="profession">Master Electrician</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+                        <p class="availability">
+                            <i class="far fa-clock"></i> Available:
+                        </p>
+                        <p> 08:00AM - 18:00PM</p>
+                        <p class="work-days">Monday to Saturday</p>
+                        <p class="contact-info">
+                            <i class="fas fa-phone"></i> <span class="phone-number">+1 (555) 123-4567</span>
+                        </p>
+                        <p class="contact-info">
+                            <i class="fas fa-envelope"></i> <span class="email">examplegmail.com</span>
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="/images/plumber-2.png" alt="Jane Smith">
+                    <div class="service-info">
+                        <h3>Jane Smith</h3>
+                        <p class="profession">Expert Plumber</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> London, UK</p>
+                        <p class="availability">
+                            <i class="far fa-clock"></i> Available:
+                        </p>
+                        <p>07:00AM - 19:00PM</p>
+                        <p class="work-days">Monday to Friday</p>
+                        <p class="contact-info">
+                            <i class="fas fa-phone"></i> <span class="phone-number">+1 (555) 123-4567</span>
+                        </p>
+                        <p class="contact-info">
+                            <i class="fas fa-envelope"></i> <span class="email">examplegmail.com</span>
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="/images/painter-2.png" alt="Mike Johnson">
+                    <div class="service-info">
+                        <h3>Mike Johnson</h3>
+                        <p class="profession">Professional Painter</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Toronto, Canada</p>
+                        <p class="availability">
+                            <i class="far fa-clock"></i> 
+                            Available:
+                        </p>
+                        <p>09:00AM - 17:00PM</p>
+                        <p class="work-days">Tuesday to Saturday</p>
+                        <p class="contact-info">
+                            <i class="fas fa-phone"></i> <span class="phone-number">+1 (555) 123-4567</span>
+                        </p>
+                        <p class="contact-info">
+                            <i class="fas fa-envelope"></i> <span class="email"></span>
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="/images/carpenter.png" alt="Sarah Brown">
+                    <div class="service-info">
+                        <h3>Sarah Brown</h3>
+                        <p class="profession">Krecam po doma</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+                        <p class="availability">
+                            <i class="far fa-clock"></i> Available:
+                        </p>
+                        <p>06:00AM - 20:00PM</p>
+                        <p class="work-days">Sunday to Friday</p>
+                        <p class="contact-info">
+                            <i class="fas fa-phone"></i> <span class="phone-number">+1 (555) 123-4567</span>
+                        </p>
+                        <p class="contact-info">
+                            <i class="fas fa-envelope"></i> <span class="email">examplegmail.com</span>
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                @for (service of services; track $index) {
+                
+                    <div class="service-card">
+                        <img src="http://localhost:3000/account/tradesman/{{service.tradesmanId}}/image" alt="Sarah Brown">
+                        <div class="service-info">
+                            <h3>{{service.tradesmanFirstName}} {{service.tradesmanLastName}}</h3>
+                            <p class="profession">{{service.serviceTitle}}</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> {{service.serviceCity}}, {{service.serviceCountry}}</p>
+                            <p class="availability">
+                                <i class="far fa-clock"></i> Available:
+                            </p>
+                            <p>{{service.serviceTimeStart}} - {{service.serviceTimeEnd}}</p>
+                            <p class="work-days">{{service.availableDaysStart}} to {{service.availableDaysEnd}}</p>
+                            <p class="contact-info">
+                                <i class="fas fa-phone"></i> <span class="phone-number">{{service.contactPhone}}</span>
+                            </p>
+                            <p class="contact-info">
+                                <i class="fas fa-envelope"></i> <span class="email">{{service.contactEmail}}</span>
+                            </p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    }
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2025 TradesmanConnect. All rights reserved.</p>
+        </footer>
+    </div>
+</div>

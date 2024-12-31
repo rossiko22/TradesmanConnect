@@ -1,0 +1,25 @@
+<div class="body">
+    <div class="background-overlay"></div>
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo">Tradesman<span>Connect</span></h1>
+        </header>
+        <main class="user-type-container">
+            <h2 class="welcome-text">{{'Welcome' | translate}}<span class="c-blue">Tradesman</span><span class="c-red">Connect</span></h2>
+            <p class="subtitle">{{'Select' | translate}}</p>
+            <div class="user-type-options">
+                <a class="user-type-option" id="tradesman-option" (click)="setAccountStatus('tradesman')">
+                    <i class="fas fa-hard-hat"></i>
+                    <span>{{'Tradesman' | translate}}</span>
+                </a>
+                <a class="user-type-option" id="client-option" (click)="setAccountStatus('client')">
+                    <i class="fas fa-search"></i>
+                    <span>{{'Client' | translate}}</span>
+                </a>
+            </div>
+        </main>
+        <footer class="app-footer">
+            <p>&copy; 2025 TradesmanConnect. All rights reserved.</p>
+        </footer>
+    </div>
+</div>

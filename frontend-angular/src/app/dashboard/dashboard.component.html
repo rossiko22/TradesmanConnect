@@ -1,0 +1,106 @@
+<div class="body">
+    <div class="container">
+        <header class="app-header">
+            <h1 class="logo"><a routerLink="/dashboard"><span style="color:#3498db">Tradesman</span><span>Connect</span></a></h1>
+            <nav class="nav-menu">
+                <a routerLink="/dashboard">Home</a>
+                <a routerLink="/services-page">Services</a>
+                <a routerLink="/about-us">About Us</a>
+                <a routerLink="/contact-us">Contact</a>
+            </nav>
+
+            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center;">
+                <a href="" class="profile-icon"><i class="fas fa-user-circle"></i></a>
+                <a routerLink="/login-register" class="logout-btn">Logout</a>
+            </div>
+        </header>
+        
+        <main>
+            <section *ngIf="accountStatus === 'tradesman'" class="hero">
+                <h1>Offer Your Expertise to Those in Need</h1>
+                <p>Become a trusted professional by showcasing your skills. Connect with clients looking for reliable and quality services in your area. Share your expertise and grow your business today!</p>
+                <a routerLink="/create-service" class="cta-button">Publish a service</a>
+            </section>
+
+            <section *ngIf="accountStatus === 'client'" class="hero">
+                <h1>Find Trusted Professionals for Your Needs</h1>
+                <p>Looking for reliable and skilled tradesmen? Connect with experienced professionals in your area who offer top-quality services for all your home improvement and repair needs. Get started today!</p>
+                <a routerLink="/services-page" class="cta-button">Find your need</a>
+            </section>
+
+            <section>
+                <h2 class="section-title">Popular Categories</h2>
+                <div class="categories">
+                    <div class="category">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Electricians</h3>
+                    </div>
+                    <div class="category">
+                        <i class="fas fa-wrench"></i>
+                        <h3>Plumbers</h3>
+                    </div>
+                    <div class="category">
+                        <i class="fas fa-paint-roller"></i>
+                        <h3>Painters</h3>
+                    </div>
+                    <div class="category">
+                        <i class="fas fa-hammer"></i>
+                        <h3>Carpenters</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Featured Professionals</h2>
+                <div class="featured-pros">
+                    <div class="pro-card">
+                        <img [src]="'/images/electrician.png' " alt="John Doe" class="tradesmanImage">
+                        <h3>Andreson Vertagi</h3>
+                        <p>Master Electrician</p>x
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <div class="pro-card">
+                        <img src="/images/plumber.png" alt="Jane Smith">
+                        <h3>Tony Smith</h3>
+                        <p>Expert Plumber</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    <div class="pro-card">
+                        <img src="/images/painter.png" alt="Mike Johnson">
+                        <!-- <img src="http://localhost:3000/account/tradesman/1/image" alt="Mike Johnson"> -->
+
+                        <h3>Mellisa Johnson</h3>
+                        <p>Professional Painter</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2025 TradesmanConnect. All rights reserved.</p>
+        </footer>
+    </div>
+</div>

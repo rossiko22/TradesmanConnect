@@ -1,0 +1,221 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+}
+
+.body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.service-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+
+.back-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #be2b1b;
+}
+
+.tradesman-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.tradesman-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.tradesman-info {
+    flex: 1;
+}
+
+.tradesman-info h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.tradesman-info p {
+    margin: 0.5rem 0;
+}
+
+.app-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.time-group {
+    margin-bottom: 1rem;
+}
+
+.time-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.time-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.time-range input {
+    width: 45%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.time-range input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.time-range span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3498db;
+}
+
+/* Optional: Styling the form group if you want to add a border to the time picker section */
+.time-group {
+    border: 1px solid #eee;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.day-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.day-range select {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.day-range select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.day-range span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3498db;
+}
+
+/* Optional: Styling the form group if you want to add a border to the day range section */
+.form-group:has(.day-range) {
+    border: 1px solid #eee;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}

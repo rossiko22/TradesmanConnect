@@ -1,0 +1,102 @@
+<div class="body">
+  <div class="background-overlay"></div>
+  <div class="container">
+    <header class="app-header">
+      <h1 class="logo">Tradesman<span>Connect</span></h1>
+    </header>
+    <main class="auth-container">
+      <h2 class="welcome-text">Tradesman Authentication</h2>
+      <div class="auth-options">
+        <a class="auth-option" [class.active]="activeForm === 'login'" (click)="toggleForm('login')" id="login-option">
+          <i class="fas fa-sign-in-alt"></i>
+          <span>Login</span>
+        </a>
+        <a class="auth-option" [class.active]="activeForm === 'register'" (click)="toggleForm('register')" id="signup-option">
+          <i class="fas fa-user-plus"></i>
+          <span>Sign Up</span>
+        </a>
+      </div>
+      <div class="auth-forms">
+        <!-- Login Form -->
+        <form *ngIf="activeForm === 'login'" id="login-form" class="auth-form" [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+          <h3>Login</h3>
+          <div class="form-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" formControlName="accountEmail" placeholder="Email" required autocomplete="username">
+          </div>
+          <div class="form-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" formControlName="password" placeholder="Password" required autocomplete="current-password">
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <!-- Login Form -->
+
+        <!-- Registration Form -->
+        <form *ngIf="activeForm === 'register'" id="signup-form" class="auth-form" [formGroup]="registerForm" (ngSubmit)="handleRegister()">
+          <h3>Sign Up</h3>
+          <div class="form-group">
+            <i class="fas fa-user"></i>
+            <input type="text" formControlName="firstName" placeholder="First Name" required autocomplete="given-name">
+          </div>
+          <div class="form-group">
+            <i class="fas fa-user"></i>
+            <input type="text" formControlName="lastName" placeholder="Last Name" required autocomplete="family-name">
+          </div>
+          <div class="form-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" formControlName="contactPhone" placeholder="Contact Phone Number" required autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" formControlName="contactEmail" placeholder="Contact Email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" formControlName="accountEmail" placeholder="Account Email" required autocomplete="username">
+          </div>
+          <div *ngIf="accountStatus === 'tradesman'" class="form-group">
+            <i class="fas fa-tools"></i>
+            <select formControlName="profession" required>
+              <option value="">Select Profession</option>
+              <option value="electrician">Electrician</option>
+              <option value="plumber">Plumber</option>
+              <option value="painter">Painter</option>
+              <option value="carpenter">Carpenter</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <i class="fas fa-city"></i>
+            <input type="text" formControlName="city" placeholder="City" required autocomplete="address-level2">
+          </div>
+          <div class="form-group">
+            <i class="fas fa-globe"></i>
+            <input type="text" formControlName="country" placeholder="Country" required autocomplete="country-name">
+          </div>
+          <div class="form-group">
+            <i class="fas fa-image"></i>
+            <!-- class="custom-file-input"  -->
+            <input type="file" #registerImage (change)="onFileSelected($event)" id="profileImage" accept="image/*" required >
+          </div>
+          <div class="form-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" formControlName="password" placeholder="Password" required autocomplete="new-password">
+          </div>
+          <div class="form-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" formControlName="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password">
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <!-- Registration Form -->
+
+      </div>
+    </main>
+    <footer class="app-footer">
+      <p>&copy; 2025 TradesmanConnect. All rights reserved.</p>
+    </footer>
+  </div>
+</div>
+
+{{currentLang}}
+{{accountStatus}}

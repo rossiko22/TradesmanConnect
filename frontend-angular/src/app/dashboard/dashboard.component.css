@@ -1,0 +1,197 @@
+.body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.hero {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.category {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--box-shadow-2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+}
+
+.category i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.featured-pros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.pro-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow-2);
+}
+
+.pro-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.app-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size:small;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+.pro-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5.5rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.pro-card:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+.profile-icon{
+    font-size: 2rem; 
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.profile-icon:hover{
+    color: rgb(87, 87, 245);
+}
+
+.rating {
+    margin-top: 0.5rem;
+    color: #f39c12;
+}
+
+.rating span {
+    margin-left: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
