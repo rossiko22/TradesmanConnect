@@ -165,15 +165,68 @@ nestjs-backend/
 ## API Endpoints
 
 ### Registration Controller
-- `POST /registration` - Register new user
-- `GET /registration/:id` - Get registration details
+- `POST /account/register` - Register new user
+- `POST /account/login` - Login user
+- `GET /account/tradesman/:id/image` - Gets image of tradesman with :id parameter
+- `GET /account/client/:id/image` - Gets image of client with :id parameter
+
 
 ### Tradesman Services Controller
 - `POST /tradesman-services` - Create new service
-- `GET /tradesman-services` - Get all services
-- `GET /tradesman-services/:id` - Get service by ID
-- `PUT /tradesman-services/:id` - Update service
-- `DELETE /tradesman-services/:id` - Delete service
+- `GET /tradesman-services/all` - Get all services
+
+
+## Contributing
+
+We welcome contributions to the TradesmanConnect project! If you'd like to help improve the platform, follow the guidelines below.
+
+### How to Contribute
+
+1. **Fork the repository**  
+   Start by forking the repository to your own GitHub account.
+
+2. **Clone the repository**  
+   Clone your forked repository to your local machine:
+   
+   bash
+   git clone https://github.com/your-username/TradesmanConnect.git
+
+3. **Create a new branch**  
+   Before making any changes, create a new branch:
+
+   bash
+   git checkout -b feature-name
+
+4. **Make your changes**  
+   Implement your changes or add new features. Be sure to follow the coding standards of the project.
+
+5. **Test your changes**  
+   Ensure your changes work as expected by running tests and verifying everything works.
+
+6. **Commit your changes**  
+   Commit your changes with a clear and concise commit message:
+
+   bash
+   git commit -m "Describe your changes"
+
+7. **Push to your fork**  
+   Push your changes to your forked repository:
+
+   bash
+   git push origin feature-name
+
+8. **Create a pull request**  
+   Open a pull request from your fork to the main repository. Make sure to describe the changes you’ve made and why you think they should be merged.
+
+### Code of Conduct
+
+By contributing to this project, you agree to abide by the Code of Conduct. We expect everyone to participate in a respectful and inclusive manner.
+
+### Issues
+
+If you find any bugs or have feature requests, please open an issue on GitHub. We will address issues as quickly as possible.
+
+Thank you for contributing to TradesmanConnect!
 
 
 
