@@ -46,27 +46,22 @@ TradesmanConnect facilitates the connection between skilled tradesmen and client
 
 - Node.js (v14 or later)
 - npm (v6 or later)
-- MySQL
+- MySQL(8.0.35)
 
 ### Backend Setup
 
 1. Clone the repository:
-git clone https://github.com/your-username/tradesman-connect.git
+git clone https://github.com/rossiko22/TradesmanConnect.git
 
 2. Navigate to the backend directory:
    cd tradesman-connect/nestjs-backend
 
 3. Install dependencies:
    npm install
-
-4. Set up your environment variables by creating a `.env` file based on `.env.example`.
-
-5. Run database migrations:
-   npm run migration:run
-
-6. Start the development server:
-   npm run start:dev
-
+   
+5. Start the development server:
+   nest start
+   
 The backend should now be running on `http://localhost:3000`.
 
 ### Frontend Setup
@@ -84,6 +79,52 @@ The frontend should now be accessible at `http://localhost:4200`.
 
 ## Project Structure
 
-### Backend (NestJS)
+### frontend (Angular)
+
+## Angular Routing - Partial Actual Structure
+
+Based on the observed file structure, the following routes likely exist:
+
+
+## Angular Routing - Partial Actual Structure
+## Project File Structure
+
+The project consists of the following main sections:
+
+- **src/** - The source code of the application.
+  - **app/** - The core application files.
+    - **app.component.ts** - Main app component logic.
+    - **app.component.html** - Main app component template.
+    - **app.component.css** - Styles for the main app component.
+    - **app.config.ts** - Configuration file for the app.
+    - **app.routes.ts** - Route definitions for navigation.
+    - **about-us/** - Folder for the About Us page.
+    - **chooselanguage/** - Folder for the language selection page.
+    - **choosesservice/** - Folder for the service selection page.
+    - **contact-page/** - Folder for the Contact page.
+    - **create-service/** - Folder for the Create Service page.
+    - **dashboard/** - Folder for the Dashboard page.
+    - **loginregister/** - Folder for the Login/Register page.
+    - **services-page/** - Folder for the Services page.
+    - **services/** - Folder for handling services-related content.
+    - **shared/** - Folder for shared components or services.
+
+- **assets/** - Folder for static resources like images and translations.
+  - **i18n/** - Folder for internationalization (translations).
+
+- **index.html** - The main HTML file for the app.
+
+Based on the observed file structure, the following routes likely exist:
+
+- `/` - Redirects to `/choose-language`
+- `/dashboard` - Dashboard page
+- `/about-us` - About Us page
+- `/choose-language` - Language selection page
+- `/choose-service` - Choose a service page
+- `/contact` - Contact page
+- `/create-service` - Create a new service page
+- `/login-register` - Login/Register page
+- `/services` - Services page
+
 
 
